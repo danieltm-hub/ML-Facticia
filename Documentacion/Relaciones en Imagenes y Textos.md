@@ -9,9 +9,8 @@
 #### Modelos para encontrar relaciones entre personalidades
 1. Modelos Basados en Word Embeddings
 
-    Word2Vec: Este modelo convierte palabras en vectores densos, permitiendo que palabras con significados similares tengan representaciones cercanas en el espacio vectorial. Esto facilita la identificación de relaciones semánticas entre términos relacionados con personas1
-    3
-    .
+    Word2Vec: Este modelo convierte palabras en vectores densos, permitiendo que palabras con significados similares tengan representaciones cercanas en el espacio vectorial. Esto facilita la identificación de relaciones semánticas entre términos relacionados con personas.
+    
     GloVe (Global Vectors for Word Representation): Similar a Word2Vec, GloVe genera representaciones vectoriales que capturan las relaciones contextuales entre palabras, lo que ayuda a identificar conexiones entre nombres y roles en un texto.
 
 2. Redes Neuronales Recurrentes (RNN)
@@ -21,25 +20,15 @@
 
 3. Transformers
 
-    BERT (Bidirectional Encoder Representations from Transformers): Este modelo utiliza atención bidireccional para comprender el contexto de las palabras dentro de una oración, lo que mejora la identificación de relaciones entre personas al considerar el contexto completo2
-    4
-    .
-    GPT-3: Un modelo generativo que puede entender y generar texto coherente, siendo útil para inferir relaciones a partir del contexto textual1
-    .
+    BERT (Bidirectional Encoder Representations from Transformers): Este modelo utiliza atención bidireccional para comprender el contexto de las palabras dentro de una oración, lo que mejora la identificación de relaciones entre personas al considerar el contexto completo.
+    
+    GPT-3: Un modelo generativo que puede entender y generar texto coherente, siendo útil para inferir relaciones a partir del contexto textual.
 
-4. Clasificación y Análisis de Sentimientos
+4. Extracción directa de Relaciones
 
-    Naive Bayes: Utilizado para clasificar textos en categorías relacionadas con personas, como identificar el tono o la intención detrás de las menciones5
-    .
-    Análisis de Sentimientos: Esta técnica permite determinar la polaridad (positiva, negativa o neutral) de las interacciones entre personas mencionadas en los textos, ayudando a entender la naturaleza de sus relaciones.
+    N-gramas: Se utilizan para capturar secuencias contiguas de palabras que pueden indicar relaciones específicas entre personas, mejorando la precisión en la identificación de interacciones.
 
-5. Extracción de Relaciones
-
-    Modelos de Extracción de Relaciones: Se utilizan técnicas específicas para identificar y clasificar relaciones entre entidades mencionadas en un texto. Esto puede incluir métodos supervisados que requieren conjuntos de datos etiquetados o enfoques no supervisados que analizan patrones en los datos.
-    N-gramas: Se utilizan para capturar secuencias contiguas de palabras que pueden indicar relaciones específicas entre personas, mejorando la precisión en la identificación de interacciones3
-    .
-
-6. Análisis Contextual
+5. Análisis Contextual
 
     Análisis Semántico: Utiliza técnicas avanzadas para comprender el significado detrás del lenguaje, lo que permite identificar cómo se relacionan las personas en diferentes contextos.
     Modelos Basados en Atención: Estos modelos permiten a los sistemas centrarse en partes específicas del texto donde se mencionan las relaciones entre personas, mejorando la capacidad para extraer información relevante.
@@ -49,19 +38,19 @@
 
     Descripción: Estos métodos se fundamentan en reglas lingüísticas y patrones específicos definidos manualmente. Utilizan expresiones regulares y diccionarios para identificar entidades.
     Ventajas: Son efectivos en dominios específicos donde las entidades son bien definidas, como el lenguaje médico.
-    Desventajas: Tienen limitaciones en escalabilidad y flexibilidad, ya que pueden no adaptarse bien a conjuntos de datos variados o grandes
+    Desventajas: Tienen limitaciones en escalabilidad y flexibilidad, ya que pueden no adaptarse bien a conjuntos de datos variados o grandes.
 
 2. Modelos de Aprendizaje Automático
 
     Descripción: Utilizan algoritmos de aprendizaje supervisado para entrenar modelos en conjuntos de datos anotados. Estos modelos aprenden a identificar y clasificar entidades basándose en características extraídas del texto.
     Ejemplos Comunes:
         Máquinas de Vectores de Soporte (SVM): Utilizadas para clasificar entidades basándose en características extraídas.
-        Árboles de Decisión: Para clasificar entidades según reglas aprendidas durante el entrenamiento
+        Árboles de Decisión: Para clasificar entidades según reglas aprendidas durante el entrenamiento.
 
 3. Redes Neuronales
 
     Descripción: Los modelos de redes neuronales, especialmente las redes neuronales recurrentes (RNN) y las redes neuronales convolucionales (CNN), son utilizados para NER debido a su capacidad para capturar patrones complejos en los datos.
-    Transformers: Modelos como BERT (Bidirectional Encoder Representations from Transformers) han demostrado ser altamente efectivos al considerar el contexto completo de las palabras, mejorando la precisión en la identificación de entidades
+    Transformers: Modelos como BERT (Bidirectional Encoder Representations from Transformers) han demostrado ser altamente efectivos al considerar el contexto completo de las palabras, mejorando la precisión en la identificación de entidades.
 
 #### Clasificación de relaciones
 Usar los modelos estudiados en clases
@@ -75,8 +64,8 @@ Usar los modelos estudiados en clases
 
 ### Propuestas:
 #### Identificación de figuras humanas:
-- YOLO [https://visionplatform.ai/es/yolov8-deteccion-de-objetos-de-ultima-generacion-en-reconocimiento-de-imagenes-computer-vision/] (https://visionplatform.ai/es/yolov8-deteccion-de-objetos-de-ultima-generacion-en-reconocimiento-de-imagenes-computer-vision/), un modelo de detección de objetos que permite la identificación y localización de múltiples objetos en tiempo real. Se basa en una única red neuronal que predice simultáneamente las clases y las cajas delimitadoras de los objetos en una sola pasada.
-- Los modelos actuales más reconocidos utlizan CNN (Redes Neuronales Convolucionales) para esta tarea o R-CNN (Region-based Convolutional Neural Networks) 
+1. YOLO es un modelo de detección de objetos que permite la identificación y localización de múltiples objetos en tiempo real. Se basa en una única red neuronal que predice simultáneamente las clases y las cajas delimitadoras de los objetos en una sola pasada.
+2. Los modelos actuales más reconocidos utlizan CNN (Redes Neuronales Convolucionales) para esta tarea o R-CNN (Region-based Convolutional Neural Networks) 
 
 #### Segmentación de imágenes para dividirlas en regiones significativas:
 1. Segmentación por Umbral
@@ -107,13 +96,6 @@ Usar los modelos estudiados en clases
     Algoritmos Comunes:
         Canny Edge Detector
         Sobel Filter
-
-5. Segmentación Basada en Color
-
-    Descripción: Separa objetos según sus características cromáticas, utilizando modelos de color como RGB o HSV para identificar segmentos basados en similitudes de color.
-    Técnicas Comunes:
-        Umbralización basada en el color
-        Histogramas de color
 
 #### Técnicas de clasificación para determinar a quien pertenece una determinada silueta en la imagen:
 Técnicas de Reconocimiento Facial
@@ -171,13 +153,6 @@ Técnicas de Reconocimiento Facial
         Clasificación Supervisada: Requiere datos etiquetados para entrenar el modelo (ej. Máxima Verosimilitud).
         Clasificación No Supervisada: Agrupa datos sin etiquetas previas (ej. K-Means).
 
-5. Transformaciones y Filtrado de Imágenes
-
-    Descripción: Modifica imágenes para resaltar características importantes y reducir el ruido.
-    Técnicas:
-        Filtrado Espacial: Suaviza o agudiza imágenes mediante técnicas matemáticas aplicadas a los píxeles vecinos.
-        Transformaciones de Color: Ayuda a distinguir objetos mediante la manipulación del espectro de color.
-
 
 ## Enfoques híbridos
 Vincular las técnicas de ambos enfoques para obtener mejores resultados
@@ -185,3 +160,41 @@ Vincular las técnicas de ambos enfoques para obtener mejores resultados
 ### Propuestas:
 - Utilización de técnicas como CLIP (Contrastive Lenguage-Image Pre-training)
 - Análisis multimodal (Modelos que puedan procesar tanto texto como imágenes simultaneamente)
+
+## Documentaciones de técnicas a utilizar
+- Word2Vec: [https://es.wikipedia.org/wiki/Word2vec](https://es.wikipedia.org/wiki/Word2vec)
+- GloVe: [https://nlp.stanford.edu/projects/glove/](https://nlp.stanford.edu/projects/glove/)
+- RNN: [https://www.tensorflow.org/guide/keras/working_with_rnns](https://www.tensorflow.org/guide/keras/working_with_rnns)
+- CNN: [https://es.wikipedia.org/wiki/Red_neuronal_convolucional](https://es.wikipedia.org/wiki/Red_neuronal_convolucional)
+- R-CNN: [https://www.ultralytics.com/es/blog/what-is-r-cnn-a-quick-overview](https://www.ultralytics.com/es/blog/what-is-r-cnn-a-quick-overview)
+- Mask R-CNN: [https://blog.roboflow.com/mask-rcnn/](https://blog.roboflow.com/mask-rcnn/)
+- Transformers: Artículo original [https://arxiv.org/abs/1706.03762](https://arxiv.org/abs/1706.03762)
+- BERT: [https://arxiv.org/abs/1810.04805](https://arxiv.org/abs/1810.04805)
+- GPT3: [https://es.wikipedia.org/wiki/GPT-3](https://es.wikipedia.org/wiki/GPT-3)
+- N-Gramas: [https://keepcoding.io/blog/n-grams-como-features-en-count-vectorizer/](https://keepcoding.io/blog/n-grams-como-features-en-count-vectorizer/)
+- Naive Bayes: [https://aprendeia.com/algoritmo-naive-bayes-machine-learning/](https://aprendeia.com/algoritmo-naive-bayes-machine-learning/)
+- Detección de entidades nombradas basado en reglas: [https://www.datacamp.com/es/blog/what-is-named-entity-recognition-ner](https://www.datacamp.com/es/blog/what-is-named-entity-recognition-ner)
+- SVM: [https://es.wikipedia.org/wiki/M%C3%A1quina_de_vectores_de_soporte](https://es.wikipedia.org/wiki/M%C3%A1quina_de_vectores_de_soporte)
+- Árboles de decisión: [https://es.wikipedia.org/wiki/%C3%81rbol_de_decisi%C3%B3n](https://es.wikipedia.org/wiki/%C3%81rbol_de_decisi%C3%B3n)
+- YOLO: [https://visionplatform.ai/es/yolov8-deteccion-de-objetos-de-ultima-generacion-en-reconocimiento-de-imagenes-computer-vision/](https://visionplatform.ai/es/yolov8-deteccion-de-objetos-de-ultima-generacion-en-reconocimiento-de-imagenes-computer-vision/)
+- Algoritmo de Otsu: [https://es.wikipedia.org/wiki/M%C3%A9todo_del_valor_umbral](https://es.wikipedia.org/wiki/M%C3%A9todo_del_valor_umbral)
+- Método de Entropía Máxima: [https://es.wikipedia.org/wiki/Principio_de_m%C3%A1xima_entrop%C3%ADa](https://es.wikipedia.org/wiki/Principio_de_m%C3%A1xima_entrop%C3%ADa)
+- Crecimiento de Regiones: [https://es.wikipedia.org/wiki/Crecimiento_de_regiones](https://es.wikipedia.org/wiki/Crecimiento_de_regiones)
+- K-means Clustering: [https://es.wikipedia.org/wiki/K-means](https://es.wikipedia.org/wiki/K-means)
+- Algoritmo Viola-Jones: [https://es.wikipedia.org/wiki/Viola%E2%80%93Jones_object_detection_framework](https://es.wikipedia.org/wiki/Viola%E2%80%93Jones_object_detection_framework)
+- Histograma de Gradientes Orientados (HOG): [https://magistereninteligenciaartificial.cl/descubre-el-poder-del-histograma-de-gradientes-orientados-para-la-deteccion-de-objetos/](https://magistereninteligenciaartificial.cl/descubre-el-poder-del-histograma-de-gradientes-orientados-para-la-deteccion-de-objetos/)
+- Análisis de Componentes Principales (PCA): [https://www.ibm.com/es-es/topics/principal-component-analysis](https://www.ibm.com/es-es/topics/principal-component-analysis)
+- Análisis Discriminante Lineal (LDA): [https://cienciadedatos.net/documentos/28_linear_discriminant_analysis_lda_y_quadratic_discriminant_analysis_qda](https://cienciadedatos.net/documentos/28_linear_discriminant_analysis_lda_y_quadratic_discriminant_analysis_qda)
+- Modelos Holísticos para detección de rostros: [http://cursos.itam.mx/akuri/PUBLICA.CNS/2000/Reconocimiento%20Hol%EDstico%20de%20Rostros.pdf](http://cursos.itam.mx/akuri/PUBLICA.CNS/2000/Reconocimiento%20Hol%EDstico%20de%20Rostros.pdf)
+- Modelos Geométricos para detección de rostros: [https://www.researchgate.net/publication/220724643_Geometric_models_for_face_recognition](https://www.researchgate.net/publication/220724643_Geometric_models_for_face_recognition)
+- FaceNet: [https://arxiv.org/abs/1503.03832](https://arxiv.org/abs/1503.03832)
+- Kernel Density Estimation (KDE): [https://www.studysmarter.co.uk/explanations/math/statistics/kernel-density-estimation/](https://www.studysmarter.co.uk/explanations/math/statistics/kernel-density-estimation/)
+- Interpolación Espacial: [https://en.wikipedia.org/wiki/Spatial_interpolation](https://en.wikipedia.org/wiki/Spatial_interpolation)
+- Índice de Moran: [https://es.wikipedia.org/wiki/I_de_Moran](https://es.wikipedia.org/wiki/I_de_Moran)
+- Diagrama de Dispersión Espacial: [https://definicion.de/diagrama-de-dispersion/](https://definicion.de/diagrama-de-dispersion/)
+- Modelo de Máxima Verosimilitud: [https://es.wikipedia.org/wiki/Estimaci%C3%B3n_de_m%C3%A1xima_verosimilitud](https://es.wikipedia.org/wiki/Estimaci%C3%B3n_de_m%C3%A1xima_verosimilitud)
+- U-Net: [https://datascientest.com/es/u-net-lo-que-tienes-que-saber](https://datascientest.com/es/u-net-lo-que-tienes-que-saber)
+- SegNet: [https://la.mathworks.com/solutions/image-video-processing/semantic-segmentation.html](https://la.mathworks.com/solutions/image-video-processing/semantic-segmentation.html)
+- Canny Edge Detector: [https://docs.opencv.org/4.x/da/d22/tutorial_py_canny.html](https://docs.opencv.org/4.x/da/d22/tutorial_py_canny.html)
+- Sobel Filter: [https://docs.opencv.org/4.x/da/d2d/tutorial_py_sobel.html](https://docs.opencv.org/4.x/da/d2d/tutorial_py_sobel.html)
+- CLIP: [https://hackernoon.com/lang/es/clip-un-acueducto-innovador-entre-la-vision-computadora-y-nlp](https://hackernoon.com/lang/es/clip-un-acueducto-innovador-entre-la-vision-computadora-y-nlp)
